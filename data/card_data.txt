@@ -1,0 +1,34 @@
+validity start/len other
+AMEX:
+Starts with 34 or 37; 15 digits
+v 34/15  not my amex: 341234567890123
+v 37/15  not my amex: 371234567890123
+i 38/15  not my amex: 381234567890123
+i 37/16d not my amex: 3712345678901234
+i 37/16c not my amex: 371234567890123w
+
+Discover:
+Starts with 65 or 6011; 16 digits
+v 65/16   6511012345678901 is a discover card
+v 6011/16 6011012345678901 is a discover card
+i 61/16   6111012345678901 is a discover card
+i 65/17d  65110123456789012 is a discover card
+i 65/17c  6511012345678901w is a discover card
+
+MasterCard:
+Starts with 51 through 55; 16 digits
+v 51/16   my mastercard is 5111012345678901 or something
+v 53/16   my mastercard is 5311012345678901 or something
+v 55/16   my mastercard is 5511012345678901 or something
+i 56/16   my mastercard is 5611012345678901 or something
+i 53/17d  my mastercard is 53110123456789012 or something
+i 52/17c  my mastercard is 5211012345678901w or something
+
+Visa:
+Starts with 4; 13 or 16 digits
+v 4/13 4123456789012
+v 4/16 4123456789012345
+i 5/13 5123456789012
+i 4/12 412345678901
+i 5/14 51234567890123
+i 5/14 5123456789012w
